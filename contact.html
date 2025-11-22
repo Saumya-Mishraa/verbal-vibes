@@ -5,8 +5,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact | VerbalVibes</title>
-
-  <!-- Font Awesome + AOS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
@@ -336,21 +334,19 @@
     const success = document.getElementById('contactSuccess');
 
     form.addEventListener('submit', function (e) {
-      // Check if PHP is likely not running (frontend-only demo)
       const isPHPAvailable = location.protocol !== "file:" && location.hostname !== "your-github-domain";
       if (!isPHPAvailable) {
-        e.preventDefault(); // prevent download
-        success.style.display = 'block'; // show message
+        e.preventDefault(); 
+        success.style.display = 'block'; 
         form.reset();
       }
     });
-
-    // Show success message after PHP submission (localhost/live server)
     if (sessionStorage.getItem("contact_success") === "1") {
       success.style.display = "block";
       sessionStorage.removeItem("contact_success");
     }
   </script>
 </body>
+
 
 </html>
