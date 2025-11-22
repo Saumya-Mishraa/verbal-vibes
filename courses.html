@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Courses | VerbalVibes</title>
+
+  <!-- 🌸 AOS Animation + Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: #f7f9fc;
+      color: #333;
+      scroll-behavior: smooth;
+    }
+
+    /* 🌐 Navbar */
+    header {
+      background: #ffffff;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px 60px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: #333;
+    }
+
+    .logo span {
+      color: #007bff;
+    }
+
+    nav {
+      display: flex;
+      gap: 30px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    nav a:hover,
+    nav a.active {
+      color: #007bff;
+    }
+
+    /* 🍔 Hamburger */
+    .hamburger {
+      display: none;
+      font-size: 1.8rem;
+      color: #333;
+      cursor: pointer;
+    }
+
+    /* 📚 Courses Section */
+    .courses {
+      text-align: center;
+      padding: 100px 20px 60px;
+    }
+
+    .courses h2 {
+      font-size: 2.3rem;
+      margin-bottom: 15px;
+      color: #222;
+    }
+
+    .courses p {
+      font-size: 1.1rem;
+      color: #666;
+      margin-bottom: 50px;
+    }
+
+    .course-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 35px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .course-card {
+      background: #fff;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      overflow: hidden;
+      transition: 0.3s;
+    }
+
+    .course-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .course-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .course-info {
+      padding: 20px;
+    }
+
+    .course-info h3 {
+      font-size: 1.3rem;
+      color: #222;
+      margin-bottom: 10px;
+    }
+
+    .course-info p {
+      font-size: 0.95rem;
+      color: #666;
+      margin-bottom: 15px;
+    }
+
+    .enroll-btn {
+      background: #007bff;
+      color: white;
+      border: none;
+      padding: 10px 25px;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: 0.3s;
+      text-decoration: none;
+    }
+
+    .enroll-btn:hover {
+      background: #0056cc;
+      transform: translateY(-2px);
+    }
+  
+
+    /* 🌙 Footer */
+    footer {
+      text-align: center;
+      background: #0a0a0a;
+      color: #fff;
+      padding: 50px 20px 15px;
+      margin-top: 60px;
+    }
+
+    footer p {
+      font-size: 0.9rem;
+      color: #aaa;
+    }
+
+    /* 📱 Responsive Navbar */
+    @media (max-width: 992px) {
+      nav {
+        display: none;
+        flex-direction: column;
+        background: white;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        width: 200px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        padding: 15px;
+      }
+
+      nav.active {
+        display: flex;
+      }
+
+      .hamburger {
+        display: block;
+      }
+
+      header {
+        padding: 15px 30px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 🌐 Navbar -->
+  <header>
+    <div class="logo">Verbal<span>Vibes</span></div>
+    <i class="fas fa-bars hamburger" id="hamburger"></i>
+    <nav id="nav-menu">
+      <a href="index.html">Home</a>
+      <a href="courses.html" class="active">Courses</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>   
+
+    </nav>
+  </header>
+
+  <!-- 📚 Courses Section -->
+  <section class="courses" id="courses">
+    <h2 data-aos="fade-up">Explore Our Language Courses</h2>
+    <p data-aos="fade-up" data-aos-delay="100">
+      Master new languages with interactive lessons, games, and real-life conversation practice.
+    </p>
+
+    <div class="course-container">
+      <div class="course-card" data-aos="zoom-in">
+        <img src="englishclass.jpeg" alt="English Course">
+        <div class="course-info">
+          <h3>English for Beginners</h3>
+          <p>Enhance your English communication skills through grammar, vocabulary, and speaking lessons.</p>
+          <a href="enroll.html" class="enroll-btn">Enroll Now</a>
+        </div>
+      </div>
+
+      <div class="course-card" data-aos="zoom-in" data-aos-delay="100">
+        <img src="spanishclass.jpeg" alt="Spanish Course">
+        <div class="course-info">
+          <h3>Spanish Essentials</h3>
+          <p>Start your Spanish journey with fun and engaging lessons for daily conversation.</p>
+         <a href="enroll.html" class="enroll-btn">Enroll Now</a>
+        </div>
+      </div>
+
+      <div class="course-card" data-aos="zoom-in" data-aos-delay="200">
+        <img src="frenchclass.jpeg" alt="French Course">
+        <div class="course-info">
+          <h3>French Fundamentals</h3>
+          <p>Learn to speak French fluently with our immersive and easy-to-follow lessons.</p>
+         <a href="enroll.html" class="enroll-btn">Enroll Now</a>
+        </div>
+      </div>
+
+      <div class="course-card" data-aos="zoom-in" data-aos-delay="300">
+        <img src="germanclass.jpeg" alt="German Course">
+        <div class="course-info">
+          <h3>German for Everyone</h3>
+          <p>Build confidence in German through grammar, reading, and real-life conversation practice.</p>
+         <a href="enroll.html" class="enroll-btn">Enroll Now</a>
+        </div>
+      </div>
+
+      <div class="course-card" data-aos="zoom-in" data-aos-delay="400">
+        <img src="japanclass.jpeg" alt="Japanese Course">
+        <div class="course-info">
+          <h3>Japanese Starter Pack</h3>
+          <p>Dive into Japan’s culture and learn Hiragana, Katakana, and essential speaking skills.</p>
+          <a href="enroll.html" class="enroll-btn">Enroll Now</a>
+        </div>
+        </div>
+      <div class="course-card" data-aos="zoom-in" data-aos-delay="500">
+  <img src="chineseclass.jpeg" alt="Chinese Course">
+  <div class="course-info">
+    <h3>Chinese Essentials</h3>
+    <p>Learn basic Mandarin phrases, pronunciation, and conversational skills for daily communication and travel.</p>
+   <a href="enroll.html" class="enroll-btn">Enroll Now</a>
+  </div>
+</div>
+      
+    </div>
+  </section>
+
+  <!-- 🌙 Footer -->
+  <footer>
+    <p>© 2025 VerbalVibes. All Rights Reserved.</p>
+  </footer>
+
+  <!-- 🌟 Scripts -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 800,
+      once: true
+    });
+
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.getElementById('nav-menu');
+    hamburger.addEventListener('click', () => {
+      navMenu.classList.toggle('active');
+    });
+  </script>
+</body>
+</html>
