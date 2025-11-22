@@ -4,8 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Enroll | VerbalVibes</title>
-
-    <!-- 🌸 Icons + AOS Animation -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
@@ -66,7 +64,6 @@
         color: #007bff;
       }
 
-      /* 🍔 Hamburger Menu */
       .hamburger {
         display: none;
         flex-direction: column;
@@ -82,7 +79,6 @@
         transition: 0.3s;
       }
 
-      /* 📋 Enroll Section */
       .enroll-section {
         max-width: 700px;
         margin: 80px auto;
@@ -163,7 +159,6 @@
         color: #aaa;
       }
 
-      /* 📱 Responsive */
       @media (max-width: 768px) {
         header {
           padding: 15px 30px;
@@ -197,7 +192,7 @@
     </style>
   </head>
   <body>
-    <!-- 🌐 Navbar -->
+
     <header>
       <div class="logo">Verbal<span>Vibes</span></div>
 
@@ -215,7 +210,6 @@
       </div>
     </header>
 
-    <!-- 📋 Enroll Form Section -->
     <section class="enroll-section" data-aos="fade-up">
       <h2>Enroll in Your Favorite Course</h2>
       <p>
@@ -262,43 +256,18 @@
         <button type="submit">
           <i class="fa-solid fa-paper-plane"></i> Enroll Now
         </button>
-        <!-- Success Message -->
-        <div
-          id="successMessage"
-          style="
-            display: none;
-            color: #0d8a32;
-            background: #d4f8d7;
-            padding: 12px;
-            border-radius: 8px;
-            margin-top: 20px;
-            font-weight: 600;
-            text-align: center;
-          "
-        >
-          Enrollment Successful! 🎉
-        </div>
-
-        <script>
-          if (sessionStorage.getItem("enroll_success") === "1") {
-            document.getElementById("successMessage").style.display = "block";
-            sessionStorage.removeItem("enroll_success"); // show only once
-          }
-        </script>
+    
       </form>
     </section>
 
-    <!-- 🌙 Footer -->
     <footer>
       <p>© 2025 VerbalVibes. All Rights Reserved.</p>
     </footer>
 
-    <!-- 🌟 Scripts -->
+  
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
       AOS.init({ duration: 800, once: true });
-
-      // 🍔 Hamburger Menu Toggle
       const hamburger = document.getElementById("hamburger");
       const navbar = document.getElementById("navbar");
 
@@ -309,3 +278,4 @@
     </script>
   </body>
 </html>
+
